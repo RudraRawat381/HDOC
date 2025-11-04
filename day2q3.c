@@ -2,31 +2,24 @@
 #include <stdio.h>
 
 int main() {
-    double length, breadth;
-    double area, perimeter;
-
-    printf("==========================================\n");
-    printf("        Rectangle Calculator\n");
-    printf("==========================================\n");
+    float length, breadth;
+    float area, perimeter;
 
     printf("Enter the length of the rectangle: ");
-    if (scanf("%lf", &length) != 1) {
-        fprintf(stderr, "Error: Invalid input for length.\n");
+    if (scanf("%f", &length) != 1) {
+        printf("Invalid input for length.\n");
         return 1;
     }
 
     printf("Enter the breadth of the rectangle: ");
     if (scanf("%f", &breadth) != 1) {
-        fprintf(stderr, "Error: Invalid input for breadth.\n");
+        printf("Invalid input for breadth.\n");
         return 1;
     }
 
-    // Calculate area (Length * Breadth)
     area = length * breadth;
-
-    // Calculate perimeter (2 * (Length + Breadth))
     perimeter = 2 * (length + breadth);
-    
+
     printf("\n--- Results ---\n");
     printf("Length: %f\n", length);
     printf("Breadth: %f\n", breadth);
