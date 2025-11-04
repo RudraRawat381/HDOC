@@ -1,8 +1,8 @@
-//Write a program to swap two numbers using a third variable.
+//Write a program to swap two numbers without using a third variable
 #include <stdio.h>
 
 int main() {
-    float x, y, temp;
+    float x, y;
 
     printf("Enter the first number: ");
     if (scanf("%f", &x) != 1) {
@@ -16,9 +16,10 @@ int main() {
         return 1;
     }
 
-    temp = x;
-    x = y;
-    y = temp;
+    // Swapping without a third variable using arithmetic
+    x = x + y;
+    y = x - y;
+    x = x - y;
 
     printf("After swapping:\n");
     printf("First number: %f\n", x);
